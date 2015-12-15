@@ -5,5 +5,5 @@ I use this script when i install ubuntu to set my settings, my themes and to ins
 to run it you have to open a terminal and type:
 
 ```bash
-cd && wget "boh" && ./install.sh
+cd && wget "https://raw.githubusercontent.com/bssec/Ubuntu-Customizer/master/installer.sh" && ./install.sh
 ```
