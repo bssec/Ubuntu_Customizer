@@ -64,6 +64,9 @@ sudo apt-get -y --force-yes install spotify-client
 sudo apt-get -y --force-yes install libgtk-3-dev
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
+wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
+sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
+sudo rm libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 wget https://mega.nz/linux/MEGAsync/xUbuntu_15.10/amd64/megasync-xUbuntu_15.10_amd64.deb
 sudo dpkg -i megasync-xUbuntu_15.10_amd64.deb
 sudo rm megasync-xUbuntu_15.10_amd64.deb
