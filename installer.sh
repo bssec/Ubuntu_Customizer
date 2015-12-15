@@ -70,9 +70,9 @@ sudo rm libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 wget https://mega.nz/linux/MEGAsync/xUbuntu_15.10/amd64/megasync-xUbuntu_15.10_amd64.deb
 sudo dpkg -i megasync-xUbuntu_15.10_amd64.deb
 sudo rm megasync-xUbuntu_15.10_amd64.deb
-sudo apt-get -f install
-sudo apt-get install lib32z1
-sudo apt-get install libfontconfig1
+sudo apt-get -y --force-yes -f install
+sudo apt-get -y --force-yes install lib32z1
+sudo apt-get -y --force-yes install libfontconfig1
 
 echo Configurazione megasync...
 
