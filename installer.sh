@@ -48,6 +48,8 @@ echo Dovrai scegliere il tema da impostare...
 sudo update-alternatives --config default.plymouth
 sudo update-initramfs -u
 
+gconftool-2 --set --type int /apps/compiz-1/plugins/unityshell/screen0/options/launcher_hide_mode 1
+
 echo Scaricamento dei programmi aggiuntivi...
 
 sudo apt-get -y --force-yes install geany
