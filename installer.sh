@@ -42,11 +42,17 @@ echo Impostazione del tema e del tema delle icone...
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc'
 gsettings set org.gnome.desktop.wm.preferences theme 'Arc'
 gsettings set org.gnome.desktop.interface icon-theme 'Numix-Circle'
-sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
+sudo mkdir /boot/grub/themes/Aurora-Penguinis-GRUB2
+sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/Aurora-Penguinis-GRUB2
 sudo su
 echo -e "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
 exit
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo mkdir /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2
+sudo cp -R aurora-penguinis/Aurora-Penguinis-Plymouth-2 /lib/plymouth/themes/
+sudo update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2/aurora-penguinis-2.plymouth 100
+
 
 
 echo Impostazione del tema di accensione...
