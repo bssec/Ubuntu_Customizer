@@ -43,7 +43,7 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Arc'
 gsettings set org.gnome.desktop.wm.preferences theme 'Arc'
 gsettings set org.gnome.desktop.interface icon-theme 'Numix-Circle'
 sudo mkdir /boot/grub/themes/Aurora-Penguinis-GRUB2
-sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/Aurora-Penguinis-GRUB2
+sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
 sudo su
 echo -e "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
 exit
