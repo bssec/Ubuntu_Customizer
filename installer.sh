@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd
+
 echo ---------------------------------------------------------------------
 echo             Benvenuti all installer di Carlo Ramponi
 echo ---------------------------------------------------------------------
@@ -25,12 +27,10 @@ sudo apt-get update
 
 echo Scaricamento dei pacchetti necessari...
 
-sudo apt-get -y --force-yes -qq install plymouth-theme-fade-in
-sudo apt-get -y --force-yes -qq install plymouth-theme-glow
-sudo apt-get -y --force-yes -qq install plymouth-theme-sabily
-sudo apt-get -y --force-yes -qq install plymouth-theme-solar
+git clone https://bitbucket.org/gemlion/aurora-penguinis.git
 sudo apt-get -y --force-yes -qq install arc-theme
 sudo apt-get -y --force-yes -qq install numix-icon-theme-circle
+
 
 echo Download e impostazione dello sfondo del desktop...
 
@@ -42,6 +42,12 @@ echo Impostazione del tema e del tema delle icone...
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc'
 gsettings set org.gnome.desktop.wm.preferences theme 'Arc'
 gsettings set org.gnome.desktop.interface icon-theme 'Numix-Circle'
+sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
+sudo su
+echo -e "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
+exit
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 
 echo Impostazione del tema di accensione...
 echo Dovrai scegliere il tema da impostare...
@@ -70,6 +76,7 @@ sudo apt-get -y --force-yes install gimp
 sudo apt-get -y --force-yes install aircrack-ng
 sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install pamusb-tools
+sudo apt-get -y --force-yes install git
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
 wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
