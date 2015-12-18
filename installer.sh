@@ -27,9 +27,10 @@ sudo apt-get update
 
 echo Scaricamento dei pacchetti necessari...
 
+sudo apt-get -y --force-yes install git
 git clone https://bitbucket.org/gemlion/aurora-penguinis.git
-sudo apt-get -y --force-yes -qq install arc-theme
-sudo apt-get -y --force-yes -qq install numix-icon-theme-circle
+sudo apt-get -y --force-yes install arc-theme
+sudo apt-get -y --force-yes install numix-icon-theme-circle
 
 
 echo Download e impostazione dello sfondo del desktop...
@@ -83,7 +84,6 @@ sudo apt-get -y --force-yes install gimp
 sudo apt-get -y --force-yes install aircrack-ng
 sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install pamusb-tools
-sudo apt-get -y --force-yes install git
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
 wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
