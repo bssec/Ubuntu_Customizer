@@ -137,7 +137,7 @@ echo Configurazione \"Dottore\"...
 
 
 cd
-echo -e notify-send \"Buongiorno Dottore\" \"Bentornato e buon lavoro...\" >> dottore
+echo notify-send \"Buongiorno Dottore\" \"Bentornato e buon lavoro...\" >> dottore
 sudo mv dottore /usr/bin/dottore
 sudo chmod +x /usr/bin/dottore
 
