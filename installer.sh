@@ -69,7 +69,7 @@ echo Scaricamento dei programmi aggiuntivi...
 
 sudo apt-get -y --force-yes install geany
 sudo apt-get -y --force-yes install google-chrome-stable
-sudo apt-get -y --force-yes install compiz-config
+sudo apt-get -y --force-yes install compiz-*
 sudo apt-get -y --force-yes install unity-tweak-tool
 sudo apt-get -y --force-yes install unetbootin
 sudo apt-get -y --force-yes install gparted
