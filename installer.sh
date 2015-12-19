@@ -35,8 +35,9 @@ sudo apt-get -y --force-yes install numix-icon-theme-circle
 
 echo Download e impostazione dello sfondo del desktop...
 
-sudo wget -q --output-document /opt/backgroung.jpg http://media.lifehack.org/wp-content/files/2013/04/29.jpg
-gsettings set org.gnome.desktop.background picture-uri file:///opt/backgroung.jpg
+sudo mkdir /opt/images
+sudo wget -q --output-document /opt/images/backgroung.jpg http://media.lifehack.org/wp-content/files/2013/04/29.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///opt/images/backgroung.jpg
 
 echo Impostazione del tema e del tema delle icone...
 
