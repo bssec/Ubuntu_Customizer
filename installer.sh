@@ -46,7 +46,7 @@ gsettings set org.gnome.desktop.interface icon-theme 'Numix-Circle'
 sudo mkdir /boot/grub/themes/Aurora-Penguinis-GRUB2
 sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
 sudo su
-echo -e "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
+echo "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
 exit
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
