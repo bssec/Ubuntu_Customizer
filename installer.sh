@@ -75,6 +75,7 @@ sudo apt-get -y --force-yes install unetbootin
 sudo apt-get -y --force-yes install gparted
 sudo apt-get -y --force-yes install gdebi
 sudo apt-get -y --force-yes install virtualbox
+sudo apt-get -y --force-yes install reaver
 sudo apt-get -y --force-yes install eclipse
 sudo apt-get -y --force-yes install grub-customizer
 sudo apt-get -y --force-yes install skype
