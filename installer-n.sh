@@ -92,10 +92,9 @@ sudo apt-get -y --force-yes install aircrack-ng
 sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install wine
 sudo apt-get -y --force-yes install pamusb-tools
+sudo apt-get -y --force-yes install nautilus-dropbox
 
-#installa dropbox
-cd && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
+
 
 wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
