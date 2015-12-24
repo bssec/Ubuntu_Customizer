@@ -79,6 +79,7 @@ sudo apt-get -y --force-yes install reaver
 sudo apt-get -y --force-yes install eclipse
 sudo apt-get -y --force-yes install grub-customizer
 sudo apt-get -y --force-yes install skype
+sudo apt-get -y --force-yes install pbuilder
 sudo apt-get -y --force-yes install spotify-client
 sudo apt-get -y --force-yes install libgtk-3-dev
 sudo apt-get -y --force-yes install kazam
