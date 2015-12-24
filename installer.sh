@@ -84,6 +84,10 @@ sudo apt-get -y --force-yes install spotify-client
 sudo apt-get -y --force-yes install libgtk-3-dev
 sudo apt-get -y --force-yes install kazam
 sudo apt-get -y --force-yes install gimp
+sudo apt-get -y --force-yes install devscripts
+sudo apt-get -y --force-yes install debhelper
+sudo apt-get -y --force-yes install dpatch
+sudo apt-get -y --force-yes install cdbs
 sudo apt-get -y --force-yes install aircrack-ng
 sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install wine
