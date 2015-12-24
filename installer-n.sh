@@ -3,7 +3,7 @@
 cd
 
 echo ---------------------------------------------------------------------
-echo             Benvenuti all installer di Nicola
+echo             Benvenuti all\'installer di Nicola
 echo ---------------------------------------------------------------------
 
 
