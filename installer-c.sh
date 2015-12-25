@@ -48,11 +48,6 @@ sudo mkdir /boot/grub/themes/Aurora-Penguinis-GRUB2
 sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
 sudo su
 echo "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
-
-echo [Re-enable hibernate by default] >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
-echo Identity=unix-user:* >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
-echo Action=org.freedesktop.upower.hibernate >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
-echo ResultActive=yes >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
 exit
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -60,6 +55,17 @@ sudo mkdir /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2
 sudo cp -R aurora-penguinis/Aurora-Penguinis-Plymouth-2 /lib/plymouth/themes/
 sudo update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2/aurora-penguinis-2.plymouth 100
 
+echo [Desktop Entry] >> Iberna.desktop
+echo Version=1.6 >> Iberna.desktop
+echo Name=Iberna >> Iberna.desktop
+echo Exec=gksudo pm-hibernate >> Iberna.desktop
+echo Icon=/opt/images/shutdown.png >> Iberna.desktop
+echo Terminal=false >> Iberna.desktop
+echo Type=Application >> Iberna.desktop
+echo Categories=Utility;Application; >> Iberna.desktop
+chmod +x Iberna.desktop
+sudo cp Iberna.desktop /usr/share/applications/
+mv Iberna.desktop $HOME/Scrivania/
 
 
 echo Impostazione del tema di accensione...
