@@ -93,7 +93,7 @@ sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install wine
 sudo apt-get -y --force-yes install pamusb-tools
 sudo apt-get -y --force-yes install nautilus-dropbox
-
+sudo apt-get -y --force-yes install telegram
 
 
 wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
