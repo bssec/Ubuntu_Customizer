@@ -48,6 +48,11 @@ sudo mkdir /boot/grub/themes/Aurora-Penguinis-GRUB2
 sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
 sudo su
 echo "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
+
+echo [Re-enable hibernate by default] >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+echo Identity=unix-user:* >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+echo Action=org.freedesktop.upower.hibernate >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+echo ResultActive=yes >> /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
 exit
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
