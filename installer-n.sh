@@ -18,7 +18,7 @@ sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ trusty partner' >> /e
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo add-apt-repository "deb http://nl.archive.ubuntu.com/ubuntu/ vivid main universe"
-
+sudo add-apt-repository ppa:atareao/telegram
 
 echo Aggiornamento della cache...
 
