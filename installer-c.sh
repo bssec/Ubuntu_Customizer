@@ -55,6 +55,9 @@ sudo mkdir /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2
 sudo cp -R aurora-penguinis/Aurora-Penguinis-Plymouth-2 /lib/plymouth/themes/
 sudo update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2/aurora-penguinis-2.plymouth 100
 
+sudo wget -O /opt/images/shutdown.png http://bssec.altervista.org/images/hibernate.png
+
+
 echo [Desktop Entry] >> Iberna.desktop
 echo Version=1.6 >> Iberna.desktop
 echo Name=Iberna >> Iberna.desktop
