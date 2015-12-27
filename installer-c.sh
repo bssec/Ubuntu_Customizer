@@ -56,19 +56,6 @@ sudo update-alternatives --install /lib/plymouth/themes/default.plymouth default
 sudo wget -O /opt/images/shutdown.png http://bssec.altervista.org/images/hibernate.png
 
 
-echo [Desktop Entry] >> Iberna.desktop
-echo Version=1.6 >> Iberna.desktop
-echo Name=Iberna >> Iberna.desktop
-echo Exec=gksudo pm-hibernate >> Iberna.desktop
-echo Icon=/opt/images/shutdown.png >> Iberna.desktop
-echo Terminal=false >> Iberna.desktop
-echo Type=Application >> Iberna.desktop
-echo Categories=Utility;Application; >> Iberna.desktop
-chmod +x Iberna.desktop
-sudo cp Iberna.desktop /usr/share/applications/
-mv Iberna.desktop $HOME/Scrivania/
-
-
 echo Impostazione del tema di accensione...
 echo Dovrai scegliere il tema da impostare...
 
@@ -115,7 +102,6 @@ sudo apt-get -y --force-yes install lib32z1
 sudo apt-get -y --force-yes install libfontconfig1
 wget --https-only https://raw.githubusercontent.com/bssec/AnonSurf-Installer/master/as-installer.sh && chmod +x as-installer.sh && sudo bash as-installer.sh
 sudo sh -c "echo \"$USER $(hostname) = (root) NOPASSWD: /usr/bin/anonsurf\" >> /etc/sudoers"
-sudo sh -c "echo \"$USER $(hostname) = (root) NOPASSWD: /usr/sbin/pm-hibernate\" >> /etc/sudoers"
 
 echo Configurazione megasync...
 
