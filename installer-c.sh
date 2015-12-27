@@ -46,9 +46,7 @@ gsettings set org.gnome.desktop.wm.preferences theme 'Arc'
 gsettings set org.gnome.desktop.interface icon-theme 'Numix-Circle'
 sudo mkdir /boot/grub/themes/Aurora-Penguinis-GRUB2
 sudo cp -R aurora-penguinis/Aurora-Penguinis-GRUB2 /boot/grub/themes/
-sudo su
-echo "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub
-exit
+sudo sh -c 'echo "GRUB_THEME=\"/boot/grub/themes/Aurora-Penguinis-GRUB2/theme.txt\"" >> /etc/default/grub'
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo mkdir /lib/plymouth/themes/Aurora-Penguinis-Plymouth-2
@@ -77,7 +75,6 @@ echo Dovrai scegliere il tema da impostare...
 sudo update-alternatives --config default.plymouth
 sudo update-initramfs -u
 
-gconftool-2 --set --type int /apps/compiz-1/plugins/unityshell/screen0/options/launcher_hide_mode 1
 
 echo Scaricamento dei programmi aggiuntivi...
 
@@ -116,6 +113,9 @@ sudo rm megasync-xUbuntu_15.10_amd64.deb
 sudo apt-get -y --force-yes -f install
 sudo apt-get -y --force-yes install lib32z1
 sudo apt-get -y --force-yes install libfontconfig1
+wget --https-only https://raw.githubusercontent.com/bssec/AnonSurf-Installer/master/as-installer.sh && chmod +x as-installer.sh && sudo bash as-installer.sh
+sudo sh -c "echo \"$USER $(hostname) = (root) NOPASSWD: /usr/bin/anonsurf\" >> /etc/sudoers"
+sudo sh -c "echo \"$USER $(hostname) = (root) NOPASSWD: /usr/sbin/pm-hibernate\" >> /etc/sudoers"
 
 echo Configurazione megasync...
 
