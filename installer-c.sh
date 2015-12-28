@@ -111,6 +111,21 @@ sudo wget http://bssec.altervista.org/images/telegram.png -O /opt/images/telegra
 tar xf telegram.tar.xz
 sudo cp -r Telegram /opt
 
+echo [Desktop Entry] >> telegram.desktop
+echo Version=1.6 >> telegram.desktop
+echo Name=Telegram >> telegram.desktop
+echo Exec='/home/carlo/Telegram/Telegram' >> telegram.desktop
+echo Icon=/opt/images/telegram.png >> telegram.desktop
+echo Type=Application >> telegram.desktop
+echo Terminal=False >> telegram.desktop
+
+sudo mv telegram.desktop /usr/share/applications/
+sudo chmod +x /usr/share/applications/telegram.desktop
+cd
+mkdir $HOME/.config/autostart
+sudo cp /usr/share/applications/telegram.desktop .config/autostart/
+
+
 
 echo Configurazione megasync...
 
@@ -119,7 +134,8 @@ mkdir $HOME/.config/autostart
 mkdir $HOME/Scrivania/Mega
 mkdir $HOME/Scrivania/Mega_bssec
 
-cd
+
+
 echo "HOME=/home/carlo/Scrivania/Mega" >> mega.sh
 echo "megasync &" >> mega.sh
 echo "HOME=/home/carlo/Scrivania/Mega_bssec" >> mega.sh
