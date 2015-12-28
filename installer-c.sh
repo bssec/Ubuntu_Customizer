@@ -103,6 +103,15 @@ sudo apt-get -y --force-yes install libfontconfig1
 wget --https-only https://raw.githubusercontent.com/bssec/AnonSurf-Installer/master/as-installer.sh && chmod +x as-installer.sh && sudo bash as-installer.sh
 sudo sh -c "echo \"$USER $(hostname) = (root) NOPASSWD: /usr/bin/anonsurf\" >> /etc/sudoers"
 
+
+echo Configurazione di telegram
+
+wget https://tdesktop.com/linux -O telegram.tar.xz
+sudo wget http://bssec.altervista.org/images/telegram.png -O /opt/images/telegram.png
+tar xf telegram.tar.xz
+sudo cp -r Telegram /opt
+
+
 echo Configurazione megasync...
 
 
