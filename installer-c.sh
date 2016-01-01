@@ -90,6 +90,7 @@ sudo apt-get -y --force-yes install cdbs
 sudo apt-get -y --force-yes install aircrack-ng
 sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install wine
+sudo apt-get -y --force-yes install evolution
 sudo apt-get -y --force-yes install mixxx
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
