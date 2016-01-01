@@ -17,7 +17,8 @@ sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
 sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ trusty partner' >> /etc/apt/sources.list.d/canonical_partner.list"
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo add-apt-repository "deb http://nl.archive.ubuntu.com/ubuntu/ vivid main universe"
+sudo add-apt-repository -y "deb http://nl.archive.ubuntu.com/ubuntu/ vivid main universe"
+sudo add-apt-repository -y ppa:mixxx/mixxx
 
 
 echo Aggiornamento della cache...
@@ -89,6 +90,7 @@ sudo apt-get -y --force-yes install cdbs
 sudo apt-get -y --force-yes install aircrack-ng
 sudo apt-get -y --force-yes install xdotool
 sudo apt-get -y --force-yes install wine
+sudo apt-get -y --force-yes install mixxx
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
 wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
