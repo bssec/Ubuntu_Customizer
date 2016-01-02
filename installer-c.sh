@@ -140,17 +140,21 @@ mkdir $HOME/Scrivania/Mega_bssec
 
 
 
-echo "HOME=/home/carlo/Scrivania/Mega" >> mega.sh
-echo "megasync &" >> mega.sh
-echo "HOME=/home/carlo/Scrivania/Mega_bssec" >> mega.sh
-echo "megasync &" >> mega.sh
+echo HOME=/home/carlo/Scrivania/Mega >> mega.sh
+echo megasync & >> mega.sh
+echo HOME=/home/carlo/Scrivania/Mega_bssec >> mega.sh
+echo megasync & >> mega.sh
 chmod +x mega.sh
+sudo mv mega.sh /opt
 
-echo "[Desktop Entry]" >> .config/autostart/megasync_instances.desktop
-echo "Type=Application" >> .config/autostart/megasync_instances.desktop
-echo "Exec=.$HOME/mega.sh" >> .config/autostart/megasync_instances.desktop
-echo "Name=megasync_instances" >> .config/autostart/megasync_instances.desktop
-echo "Comment=megasync_instances"  >> .config/autostart/megasync_instances.desktop
+sudo wget bssec.altervista.org/images/mega.png -O /opt/images
+
+echo [Desktop Entry] >> .config/autostart/megasync_instances.desktop
+echo Type=Application >> .config/autostart/megasync_instances.desktop
+echo Exec=/opt/mega.sh >> .config/autostart/megasync_instances.desktop
+echo Icon=/opt/images/mega.png  >> .config/autostart/megasync_instances.desktop
+echo Name=megasync_instances >> .config/autostart/megasync_instances.desktop
+echo Comment=megasync_instances  >> .config/autostart/megasync_instances.desktop
 chmod +x .config/autostart/megasync_instances.desktop
 
 
