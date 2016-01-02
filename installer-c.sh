@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd
-
+clear
 echo ---------------------------------------------------------------------
 echo             Benvenuti all installer di Carlo Ramponi
 echo ---------------------------------------------------------------------
@@ -94,6 +94,7 @@ sudo apt-get -y --force-yes install evolution
 sudo apt-get -y --force-yes install mixxx
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
+sudo apt-get -y --force-yes nautilus-dropbox
 wget http://cz.archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 sudo rm libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
